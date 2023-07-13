@@ -1,7 +1,7 @@
 ﻿
 //Room Calculator Lab
 
-//prompts the user for length and width of the classroom
+//prompts the user for length, width and height of the classroom
 Console.WriteLine("Welcome to Grand Circus' Room Detail Generator!");
 
 Console.Write("Enter Length: ");
@@ -10,13 +10,21 @@ double length = double.Parse(Console.ReadLine());
 Console.Write("Enter Width: ");
 double width = double.Parse(Console.ReadLine());
 
-//displays the area and perimeter of that classroom
+Console.Write("Enter height: ");
+double height = double.Parse(Console.ReadLine());
+
+//displays the area, perimeter, volume, and surface area of that classroom
 
 double area = length * width;
 double perimeter = 2 * (length + width);
+double volume = length * width * height;
+double surfaceArea = 2 * area + 2 * (length * height) + 2 * (width * height);
+
 
 Console.WriteLine("Area: " + area);
 Console.WriteLine("Perimeter: " + perimeter);
+Console.WriteLine("Volume: " + volume);
+Console.WriteLine("Surface Area: " + surfaceArea);
 
 //classifies room as small(<=250 sqft), medium (250 - 650sqt), or large( >= 650sqft)
 
