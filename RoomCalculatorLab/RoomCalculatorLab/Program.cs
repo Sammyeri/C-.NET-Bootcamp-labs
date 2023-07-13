@@ -19,3 +19,18 @@ Console.WriteLine("Area: " + area);
 Console.WriteLine("Perimeter: " + perimeter);
 
 //classifies room as small(<=250 sqft), medium (250 - 650sqt), or large( >= 650sqft)
+
+if(area <= 250)
+{
+    Console.WriteLine("This is a small-sized room.");
+}
+else if (area > 250 && area < 650)
+{
+    Console.WriteLine("This is a medium-sized room.");
+}
+else
+{
+    Console.WriteLine("This is a large-sized room.");
+}
+
+Console.WriteLine("Thank you for using the Room Detail Generator");
