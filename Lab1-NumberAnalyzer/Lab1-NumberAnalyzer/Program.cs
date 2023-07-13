@@ -24,5 +24,8 @@ else if(userInput > 25 && userInput < 61 && userInput%2 == 0)
     Console.WriteLine("The number " + userInput + " is even and betweeen 26 and 60 inclusive");
 }
 //if even and greater than 60, print Even and Greater than 60
-
+else if(userInput > 60 && userInput%2 == 0)
+{
+    Console.WriteLine("The number " + userInput + " is even and greater than 60");
+}
 //if odd and greater than 60, print Odd and greater than 60
