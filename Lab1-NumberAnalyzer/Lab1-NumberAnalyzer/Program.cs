@@ -9,7 +9,10 @@ int userInput = int.Parse(Console.ReadLine());
 //display result based on integer input
 
 //if odd and less than 60 output "Odd and less than 60"
-
+if (userInput < 60 && userInput%2 != 0)
+{
+    Console.WriteLine("The number " + userInput + " is odd and less than 60");
+}
 //if even and in range of 2 - 24 print "Even and less than 25"
 
 //if even and in range of 26 - 60 print Even and between 26 and 60 inclusive
