@@ -1,4 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Number Analyzer
 
-Console.WriteLine("This is a C# program! ")
+//prompt for user to input interger between 1 and 100 inclusive
+
+Console.WriteLine("Please input a number that is in the range 1 to 100");
+int userInput = int.Parse(Console.ReadLine());
+
+
+//display result based on integer input
+
+//if odd and less than 60 output "Odd and less than 60"
+
+//if even and in range of 2 - 24 print "Even and less than 25"
+
+//if even and in range of 26 - 60 print Even and between 26 and 60 inclusive
+
+//if even and greater than 60, print Even and Greater than 60
+
+//if odd and greater than 60, print Odd and greater than 60
