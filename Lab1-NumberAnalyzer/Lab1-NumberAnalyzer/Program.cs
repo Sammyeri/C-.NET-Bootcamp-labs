@@ -12,7 +12,7 @@ do
 
     //prompt for user to input interger between 1 and 100 inclusive
 
-    Console.WriteLine(user + " Please input a number that is in the range 1 to 100");
+    Console.WriteLine(user + " Please input a positive integer that is in the range 1 to 100");
     string rawUserInput = Console.ReadLine();
 
     int userInput;
@@ -29,7 +29,7 @@ do
     }
     else
     {
-        Console.WriteLine("Sorry, " + rawUserInput + " is not a number, please try again");
+        Console.WriteLine("Sorry, " + rawUserInput + " is not an integer in the range 1 - 100, please try again.");
         continue;
     }
 
@@ -55,7 +55,7 @@ do
     //if even and greater than 60, print Even and Greater than 60
     else if (userInput > 60 && userInput % 2 == 0)
     {
-        Console.WriteLine(user + ", the number " + userInput + user + " is even and greater than 60");
+        Console.WriteLine(user + ", the number " + userInput + " is even and greater than 60");
     }
     //if odd and greater than 60, print Odd and greater than 60
     else
@@ -64,7 +64,7 @@ do
     }
 
     //Ask if user wants to play again
-    Console.WriteLine(user + " if you would like to play again, input yes, to stop, input stop");
+    Console.WriteLine(user + " if you would like to play again, press enter, to stop, input stop");
     string stop = Console.ReadLine();
     if(stop == "stop")
     {
