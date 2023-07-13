@@ -13,10 +13,29 @@ do
     //prompt for user to input interger between 1 and 100 inclusive
 
     Console.WriteLine(user + " Please input a number that is in the range 1 to 100");
-    int userInput = int.Parse(Console.ReadLine());
+    string rawUserInput = Console.ReadLine();
+
+    int userInput;
+    if (int.TryParse(rawUserInput, out userInput))
+    {
+       if(userInput > 0 && userInput < 101)
+        {
+
+        }else
+        {
+            Console.WriteLine("Sorry, " + userInput + " is not in the range 1 - 100, please try again.");
+            continue;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Sorry, " + rawUserInput + " is not a number, please try again");
+        continue;
+    }
 
 
-   //display result based on interger input
+
+    //display result based on interger input
 
     //if odd and less than 60 output "Odd and less than 60"
     if (userInput < 60 && userInput % 2 != 0)
