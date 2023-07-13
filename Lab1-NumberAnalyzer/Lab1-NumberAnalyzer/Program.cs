@@ -29,3 +29,7 @@ else if(userInput > 60 && userInput%2 == 0)
     Console.WriteLine("The number " + userInput + " is even and greater than 60");
 }
 //if odd and greater than 60, print Odd and greater than 60
+else
+{
+    Console.WriteLine("The number " + userInput + " is odd and greater than 60");
+}
