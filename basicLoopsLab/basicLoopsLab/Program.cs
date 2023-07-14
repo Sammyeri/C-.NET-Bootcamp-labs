@@ -87,13 +87,49 @@ while (isRunning)
 
 //part 3 and 4
 //while loop, continues until correct code or attempts run out
+bool enterKey = true;
+int chances = 5;
+
+while(enterKey)
+{
 //ask user for key code
+    Console.WriteLine("Please insert the key code, you have " + chances + " chances remaining.");
+    string userInputpt3 = Console.ReadLine();
+    int userNumberpt3;
+    bool succeededpt3 = int.TryParse(userInputpt3, out userNumberpt3);
+    
+    if (chances == 0)
+    {
+    //if exceeded tries print warning message of too many attempts
+        Console.WriteLine("Sorry, but you have exceeded the number of attempts available, Goodbye!");
+        break;
+    }
 
-//if correct print welcome message once correct key entered
+    if (!succeededpt3)
+    {
+        chances--;
+        Console.WriteLine("Sorry, " + userInputpt3 + " is not the correct key format");
+        continue;
+    }
+    
+    //if correct print welcome message once correct key entered
+    if(userNumberpt3 == 13579 && chances > 0)
+    {
+        Console.WriteLine("Welcome!");
+        break;
+    }
+    //if wrong repeat
+    else
+    {
+        Console.WriteLine("That is not the correct key");
+        chances--;
+    }
 
-//if wrong repeat
 
-//if exceeded tries print warning message of too many attempts
+
+
+}
+
 
 
 // part 5, do above but with do-while loop
