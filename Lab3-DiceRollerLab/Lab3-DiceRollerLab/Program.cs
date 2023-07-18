@@ -24,7 +24,27 @@ while (!passed)
     }
 }
 //prompt user to roll the dice
+bool readyRoll = false;
+while (!readyRoll) 
+{
+    Console.WriteLine("Roll the dice? (y/n)");
+    ConsoleKeyInfo userReady = Console.ReadKey();
 
+    if(userReady.KeyChar == 'y')
+    {
+        break;
+    }
+    else if(userReady.KeyChar == 'n')
+    {
+        Console.WriteLine(" ");
+        continue;
+    }
+    else
+    {
+        Console.WriteLine(" ");
+        Console.WriteLine($"Sorry, {userReady.KeyChar} is not a valid choice.");
+    }
+}
 //roll 2 dice
 
 //display results of each and total
