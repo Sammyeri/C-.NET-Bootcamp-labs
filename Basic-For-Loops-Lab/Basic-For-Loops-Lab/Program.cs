@@ -1,38 +1,65 @@
 ﻿
 //Basic For-loops Lab
-
-//prompt user to enter a number
-
-Console.WriteLine("Please input a whole number.");
-string userInput = Console.ReadLine();
-
-int userNumber = 0;
-bool passed = int.TryParse(userInput, out userNumber);
-
-int total = 0;
-
-if (passed)
+bool continuing = true;
+while (continuing)
 {
-    if(userNumber > 0)
+
+
+
+    //prompt user to enter a number
+
+    Console.WriteLine("Please input a whole number.");
+    string userInput = Console.ReadLine();
+
+    int userNumber = 0;
+    bool passed = int.TryParse(userInput, out userNumber);
+
+    int total = 0;
+
+    //use for loop to calculate the sum of all the numbers from 1 to the chosen number
+    if (passed)
     {
-        for(int i = 0; i < userNumber; i++)
+        if (userNumber > 0)
         {
-            total += i;
+            for (int i = 1; i <= userNumber; i++)
+            {
+                total += i;
+            }
+            Console.WriteLine(total);
         }
-        Console.WriteLine(total);
+        else
+        {
+            for (int j = -1; j >= userNumber; j--)
+            {
+                total += j;
+            }
+            Console.WriteLine(total);
+        }
     }
     else
     {
-        for(int j = 0; j > userNumber; j--)
+        Console.WriteLine($"Sorry {userInput} is not a valid whole number");
+
+    }
+    
+    while(continuing)
+    {
+        Console.WriteLine("Would you like to continue(y/n)");
+        ConsoleKeyInfo again = Console.ReadKey();
+        Console.WriteLine(" ");
+
+        if(again.KeyChar == 'y')
         {
-            total += j;
+            continuing = true;
+            break;
         }
-        Console.WriteLine(total);
+        else if(again.KeyChar == 'n')
+        {
+            continuing = false;
+        }
+        else
+        {
+            Console.WriteLine($"Sorry, {again.KeyChar} is not a valid option");
+        }
     }
 }
-else
-{
-    Console.WriteLine($"Sorry {userInput} is not a valid whole number");
-    
-}
-//use for loop to calculate the sum of all the numbers from 1 to the chosen number
