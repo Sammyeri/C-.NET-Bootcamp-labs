@@ -50,9 +50,12 @@ while (!readyRoll)
 int dice1 = Method.roll(diceSize);
 int dice2 = Method.roll(diceSize);
 
-Console.WriteLine($"Dice 1: {dice1}, Dice2: {dice2}");
 //display results of each and total
+int total = Method.total(dice1, dice2);
 
+Console.WriteLine($"Dice 1: {dice1}");
+Console.WriteLine($"Dice 2: {dice2}");
+Console.WriteLine($"Total: {total}");
 //for 6 sided only put extra messages
 
 //snake eyes, 2 ones

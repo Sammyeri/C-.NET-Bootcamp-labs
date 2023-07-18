@@ -8,4 +8,9 @@ public class Method
         int roll = random.Next(1, n + 1);
         return roll;
     }
+
+    public static int total(int dice1, int dice2)
+    {
+        return dice1 + dice2;
+    }
 }
