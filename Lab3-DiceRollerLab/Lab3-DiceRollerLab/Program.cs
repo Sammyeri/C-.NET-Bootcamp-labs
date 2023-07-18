@@ -50,6 +50,8 @@ while (!readyRoll)
 int dice1 = Method.roll(diceSize);
 int dice2 = Method.roll(diceSize);
 
+dice1 =  6;
+dice2 = 6;
 
 //display results of each and total
 int total = Method.total(dice1, dice2);
@@ -61,15 +63,8 @@ Console.WriteLine($"Total: {total}");
 if(diceSize == 6)
 {
     Method.message(dice1, dice2);
+    Method.extraMessage(dice1, dice2);
 }
-//snake eyes, 2 ones
 
-//ace duece: 1 and 2
-
-//Box cars: 2 6s
-
-//win: total of 7 or 11
-
-//craps: total of 2, 3, 12
 
 //asks if user wants to roll again
