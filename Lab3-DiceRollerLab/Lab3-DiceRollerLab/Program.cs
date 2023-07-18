@@ -2,14 +2,16 @@
 //Dice Roller Lab
 
 //ask user to enter dice size, make sure to only take positive whole numbers
+using Lab3_DiceRollerLab;
+
 bool passed = false;
 
+int diceSize = 0;
 while (!passed)
 {
     Console.WriteLine("What size of dice would you like to roll today?");
     string userInputSize = Console.ReadLine();
 
-    int diceSize = 0;
     passed = int.TryParse(userInputSize, out diceSize);
 
     if (passed && diceSize > 0)
@@ -29,6 +31,7 @@ while (!readyRoll)
 {
     Console.WriteLine("Roll the dice? (y/n)");
     ConsoleKeyInfo userReady = Console.ReadKey();
+    Console.WriteLine(" ");
 
     if(userReady.KeyChar == 'y')
     {
@@ -36,17 +39,18 @@ while (!readyRoll)
     }
     else if(userReady.KeyChar == 'n')
     {
-        Console.WriteLine(" ");
         continue;
     }
     else
     {
-        Console.WriteLine(" ");
         Console.WriteLine($"Sorry, {userReady.KeyChar} is not a valid choice.");
     }
 }
 //roll 2 dice
+int dice1 = Method.roll(diceSize);
+int dice2 = Method.roll(diceSize);
 
+Console.WriteLine($"Dice 1: {dice1}, Dice2: {dice2}");
 //display results of each and total
 
 //for 6 sided only put extra messages
