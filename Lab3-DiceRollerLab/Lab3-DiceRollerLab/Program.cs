@@ -2,7 +2,27 @@
 //Dice Roller Lab
 
 //ask user to enter dice size, make sure to only take positive whole numbers
+bool passed = false;
 
+while (!passed)
+{
+    Console.WriteLine("What size of dice would you like to roll today?");
+    string userInputSize = Console.ReadLine();
+
+    int diceSize = 0;
+    passed = int.TryParse(userInputSize, out diceSize);
+
+    if (passed && diceSize > 0)
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine($"Sorry, {userInputSize} is not a vaild dice size. ");
+        passed = false;
+        continue;
+    }
+}
 //prompt user to roll the dice
 
 //roll 2 dice
