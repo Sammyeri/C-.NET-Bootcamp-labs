@@ -38,14 +38,21 @@ while (again)
     }
 
     //displays table of squares and budes from 1 to value entered
+    Console.WriteLine("Number  \t Squared \t Cubed");
+    Console.WriteLine("======= \t ======= \t ======");
     for (int i = 1; i <= userInput; i++)
     {
         int square = i * i;
         int cube = i * i * i;
 
-        Console.WriteLine($"Number: {i}");
-        Console.WriteLine($"Squared: {square}");
-        Console.WriteLine($"Cubed: {cube}");
+        if(i < 100)
+        {
+            Console.WriteLine($"{i} \t \t {square}  \t \t {cube}");
+        }
+        else
+        {
+            Console.WriteLine($"{i} \t \t {square}  \t {cube}");
+        }
     }
 
     bool incorrect = true;
