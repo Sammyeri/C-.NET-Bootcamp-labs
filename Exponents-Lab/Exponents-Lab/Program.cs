@@ -1,12 +1,33 @@
 ﻿
 //Exponents lab
 
-//prompts user to enter an integer
-Console.WriteLine("Enter an integer: ");
-string userInputRaw = Console.ReadLine();
+bool valid = false;
 
-Console.WriteLine(userInputRaw);
-//only accepts positive, >0, and whole numbers as input, and maiximum number input is the largest that can still fit in int when cubed
+while (!valid)
+{
+    //prompts user to enter an integer
+    Console.WriteLine("Enter a Positive integer: ");
+    string userInputRaw = Console.ReadLine();
+
+    int userInput;
+    //only accepts positive, whole numbers as input, and maiximum number input is the largest that can still fit in int when cubed
+    bool succeded = int.TryParse(userInputRaw, out userInput);
+    if (succeded)
+    {
+        if(userInput > 0)
+        {
+            valid = true;
+        }
+        else
+        {
+            Console.WriteLine($"Sorry, {userInput} is not a positive integer.");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"Sorry, {userInputRaw} is not a valid integer.");
+    }
+}
 
 //displays table of squares and budes from 1 to value entered
 
