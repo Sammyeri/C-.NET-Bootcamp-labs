@@ -6,7 +6,7 @@ bool valid = false;
 while (!valid)
 {
     //prompts user to enter an integer
-    Console.WriteLine("Enter a Positive integer: ");
+    Console.WriteLine("Enter a positive integer: ");
     string userInputRaw = Console.ReadLine();
 
     int userInput;
@@ -14,7 +14,11 @@ while (!valid)
     bool succeded = int.TryParse(userInputRaw, out userInput);
     if (succeded)
     {
-        if(userInput > 0)
+        if(userInput > 1290)
+        {
+            Console.WriteLine($"Sorry {userInput} is too large to square and cube.");
+        }
+        else if(userInput > 0)
         {
             valid = true;
         }
