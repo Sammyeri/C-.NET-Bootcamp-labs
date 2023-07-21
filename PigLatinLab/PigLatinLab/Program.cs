@@ -37,30 +37,36 @@ while (!again)
     }
     word = word.Trim();
 
-    //translates text to pig latin
+    string[] words = word.Split(" ");
 
-    if (word.ToLower()[0] == 'a' || word.ToLower()[0] == 'e' || word.ToLower()[0] == 'i' || word.ToLower()[0] == 'o' || word.ToLower()[0] == 'u')
+    //translates text to pig latin
+    foreach(string s in words)
     {
-        Console.WriteLine($"{word}way");
-    }
-    else
-    {
-        int count = 0;
-        string temp = "";
-        for (int i = 0; i < word.Length; i++)
+        if (s.ToLower()[0] == 'a' || s.ToLower()[0] == 'e' || s.ToLower()[0] == 'i' || s.ToLower()[0] == 'o' || s.ToLower()[0] == 'u')
         {
-            if (word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u')
-            {
-                break;
-            }
-            else
-            {
-                temp = temp + word[i];
-                count++;
-            }
+            Console.Write($"{s}way");
         }
-        Console.WriteLine(word.Substring(count) + temp + "ay");
+        else
+        {
+            int count = 0;
+            string temp = "";
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+                {
+                    break;
+                }
+                else
+                {
+                    temp = temp + s[i];
+                    count++;
+                }
+            }
+            Console.Write(s.Substring(count) + temp + "ay");
+        }
+        Console.Write(" ");
     }
+    Console.WriteLine(" ");
 
     //displays result
 
