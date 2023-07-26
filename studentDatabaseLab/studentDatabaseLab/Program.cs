@@ -16,6 +16,9 @@ string[] studentFavoriteFoods = new string[5] { "Steak", "Gelato", "Pizza", "Roa
 
 //prompt user to asl about a particular student by number
 
+Console.WriteLine($"Welcome! Which student would you like to learn more about? Enter a number 1-{studentNames.Length}");
+string userChoice = Console.ReadLine();
+
 //convert user input to integer
 
 //find and print student's name
