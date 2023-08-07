@@ -1,5 +1,7 @@
 ﻿//circle objects lab
 
+using circleObjectsLab;
+
 bool again = true;
 while (again)
 {
@@ -8,8 +10,9 @@ while (again)
     while (true)
     {
         //prompt user to enter a radius, may contain decimals(use a double)
-        Console.WriteLine("Enter Radius: ");
+        Console.Write("Enter Radius: ");
         string userInputRaw = Console.ReadLine();
+        Console.WriteLine(" ");
 
         bool succeded = double.TryParse(userInputRaw, out userInput);
 
@@ -25,9 +28,13 @@ while (again)
         }
 
     }
-       
-    //when valid data entered, create instance of circle, then uses methods to display diameter, circumfrence and area
 
+
+    //when valid data entered, create instance of circle, then uses methods to display diameter, circumfrence and area
+    Circle circle = new Circle(userInput);
+    Console.WriteLine($"Diamter: {circle.CalculateDiameter()}");
+    Console.WriteLine($"Circumfrence: {circle.CalculateCircumfrence()}");
+    Console.WriteLine($"Area: {circle.CalculateArea()}");
 
 
     //asks user if circle should grow
