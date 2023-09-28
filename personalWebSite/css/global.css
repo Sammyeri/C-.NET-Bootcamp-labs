@@ -1,0 +1,64 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+}
+
+.fakebutton{
+    background: slategray;
+    width: 50vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.fakebutton:hover{
+    background: rgb(112, 128, 144, 0.5);
+    box-shadow: 5px 5px 5px black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar:hover{
+    background: rgba(112, 128, 144, .5);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+body{
+    background: linear-gradient(-45deg, white, #677d81, #316578, black);
+    background-size: 400% 2000%;
+    animation: backgroundslide 15s ease infinite;
+    background: linear-gradient(45deg, black, #316578, #677d81, white);
+    background-size: 400% 2000%;
+    animation: backgroundslide 15s ease infinite;
+}
+
+@keyframes backgroundslide {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
