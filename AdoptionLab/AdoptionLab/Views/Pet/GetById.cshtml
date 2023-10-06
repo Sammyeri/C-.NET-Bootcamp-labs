@@ -1,0 +1,14 @@
+﻿@model Pet
+
+<a class="btn btn-primary" asp-action="Index" asp-controller="Home">Home</a>
+<div class="text-center">
+    <h1>@Model.Name - @Model.Age</h1>
+    <img src="@Model.Image" style="width: 300px; height: 300px"/>
+    <p>@Model.Species</p>
+    <p>@Model.Breed</p>
+    <p>@Model.Description</p>
+    <div class="buttonContainer">
+        <a class="btn btn-primary" asp-action="Delete" asp-controller="Pet" asp-route-id=@Model.Id>Adopt</a>
+        <a class="btn btn-primary" asp-action="Index" asp-controller="Pet">Back</a>
+    </div>
+</div>
