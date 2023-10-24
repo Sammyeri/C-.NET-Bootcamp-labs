@@ -1,0 +1,22 @@
+﻿@model Movie
+
+<form method="post" action="/Home/MovieSearchResults">
+    <div class="form-group">
+        <label asp-for="Title">Search movie by Title:</label>
+        <input asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>  
+    <button type="submit">Submit</button>
+</form>
+
+
+@if(Model != null)
+{
+   
+    <img src="@Model.Poster">
+    <p>@Model.Title</p>
+    <p>@Model.Year</p>
+    <p>@Model.Rating</p>
+    <p>@Model.Genre</p> 
+    <p>@Model.Plot</p>
+}
