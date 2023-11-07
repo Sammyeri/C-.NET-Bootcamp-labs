@@ -1,7 +1,7 @@
 
 interface Mountain{
     name: string,
-    height: Number
+    height: number
 }
 
 let mountainArray :Mountain[] = [
